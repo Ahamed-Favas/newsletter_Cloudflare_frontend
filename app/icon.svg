@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="800px" height="800px"><svg width="800px" height="800px" viewBox="0 -2 64 64" xmlns="http://www.w3.org/2000/svg">
+  <g id="SvgjsG1027" transform="translate(0 -126)">
+    <path id="SvgjsPath1026" data-name="Path 158" d="M60,182l2-54H18v54" fill="#1b8cff" opacity="0.3"></path>
+    <line id="SvgjsLine1025" data-name="Line 301" x2="44" transform="translate(18 178)" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="2" opacity="0.5"></line>
+    <line id="SvgjsLine1024" data-name="Line 302" x2="44" transform="translate(18 174)" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="2" opacity="0.5"></line>
+    <path id="SvgjsPath1023" data-name="Path 159" d="M62,175V128H18v47" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+    <line id="SvgjsLine1022" data-name="Line 303" x2="42" transform="translate(11 184)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></line>
+    <path id="SvgjsPath1021" data-name="Path 160" d="M18,175v1a8,8,0,0,1-16,0V156H18" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+    <path id="SvgjsPath1020" data-name="Path 161" d="M62,175a9,9,0,0,1-9,9" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+    <line id="SvgjsLine1019" data-name="Line 304" x2="42" transform="translate(20 133)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+    <line id="SvgjsLine1018" data-name="Line 305" x2="16" transform="translate(2 161)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+    <line id="SvgjsLine1017" data-name="Line 306" x1="26" transform="translate(25 151)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+    <line id="SvgjsLine1016" data-name="Line 307" x1="24" transform="translate(25 155)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+    <line id="SvgjsLine1015" data-name="Line 308" x1="30" transform="translate(25 143)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+    <line id="SvgjsLine1014" data-name="Line 309" x1="28" transform="translate(25 147)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line>
+  </g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

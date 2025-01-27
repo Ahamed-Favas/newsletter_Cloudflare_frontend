@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useTransition } from "react";
 import { z } from "zod";
 import { Toaster, toast } from "sonner";
-import { sample } from "./server/action";
+import { SignIN } from "@/auth/signInAction";
 
 export default function Home() {
   const [inputVisibility, setInputVisibility] = useState(true)
@@ -16,7 +16,7 @@ export default function Home() {
 
     if (checkInput.success) {
       startTransition(async() => {
-        const response = await sample(checkInput.data);
+        const response = await SignIN(checkInput.data);
         if ( response?.status == "success" ) {
           setInputVisibility(false)
           return

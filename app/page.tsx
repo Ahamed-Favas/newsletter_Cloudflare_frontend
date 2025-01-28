@@ -52,12 +52,12 @@ export default function Home() {
         {inputVisibility ? (
             <>
               <input type="text" autoComplete="off" name="userInput" placeholder="Your email address"
-                className="overflow-hidden bg-gradient-to-r from-[#4b494932] via-[#700da698] to-[#d40c0ce5] animate-gradient bg-400 text-white/70 relative w-full bg-inherit border-1 border-white rounded-full pl-8 py-4 pr-28 text-lg font-light placeholder-white/60 outline-none" />
+                className="overflow-hidden bg-gradient-to-r from-[#0f0c29] via-[#700da698] to-[#0f0c29] animate-gradient bg-400 text-white/70 relative w-full bg-inherit border-1 border-white rounded-full pl-8 py-4 pr-28 text-lg font-light placeholder-white/60 outline-none" />
               <Button
                   disabled={isPending}
                   className={`absolute top-[10%] right-[5px] rounded-full h-[80%] aspect-square text-md text-white bg-white/5 ${isPending ? 'bg-white/0' : 'hover:bg-[#d40c0c83]'}`}
                 >
-                  {isPending ? <div><ReactLoading type={"spokes"} color={"#ffffff"} height={'4xl'} width={'4xl'} /></div> : 'Subscribe'}
+                  {isPending ? <div><ReactLoading type={"spokes"} color={"#fff"} height={'4xl'} width={'4xl'} /></div> : 'Subscribe'}
               </Button>
             </> ): (
             <>

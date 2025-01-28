@@ -31,5 +31,8 @@ export const authOptions = {
         return true
       }
     }
-  }
+  },
+  pages: {
+    signIn: "/"
+  },
 }

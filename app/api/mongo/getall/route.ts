@@ -7,7 +7,6 @@ async function getUsers() {
 }
 
 export async function GET(req: Request) {
-
     const token = req.headers.get("Authorization")?.split(" ")[1];
     if (!token) {
         return NextResponse.json({ message: "Unauthorized" }, { status: 401 });

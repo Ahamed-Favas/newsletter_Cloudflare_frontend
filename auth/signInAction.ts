@@ -11,7 +11,6 @@ export async function SignIN(email: string): Promise<{status: string}> {
     return {status: "success"};
 }
 
-//TODO depoy and change email
 //TODO configure cf to read users db
 //TODO chnage cf ai congiruration, rss feeds
 //TODO change mail template to more engaging

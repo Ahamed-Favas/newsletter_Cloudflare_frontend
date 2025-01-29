@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(req: NextRequest) {
+  console.log("middleware req", req)
   const allowedOrigin = process.env.WORKER_URL as string;
   const origin = req.headers.get("origin") || req.headers.get("referer");
   if (!origin || !origin.startsWith(allowedOrigin)) {

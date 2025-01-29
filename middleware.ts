@@ -10,5 +10,5 @@ export function middleware(req: NextRequest) {
   return NextResponse.next();
 }
 export const config = {
-  matcher: "/api/:path*",
+  matcher: "/api/mongo:path*",
 };

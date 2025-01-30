@@ -17,13 +17,22 @@ export default function Home() {
 
     if (checkInput.success) {
       startTransition(async() => {
-        const response = await SignIN(checkInput.data);
-        if ( response?.status == "success" ) {
-          setInputVisibility(false)
-          return
-        }
-        toast("Something went wrong, please try again.")
-        return
+        try {
+
+            const response = await SignIN(checkInput.data);
+            if ( response?.status == "success" ) {
+              setInputVisibility(false)
+              return
+            }
+            toast("Something went wrong, please try again.")
+            return 
+
+        } catch {
+
+            toast("Something went wrong, please try again.")
+            return
+
+        }  
       })
     }
     else if (checkInput.error){
@@ -52,7 +61,7 @@ export default function Home() {
         {inputVisibility ? (
             <>
               <input type="text" autoComplete="off" name="userInput" placeholder="Your email address"
-                className="overflow-hidden bg-gradient-to-r from-[#0f0c29] via-[#700da698] to-[#0f0c29] animate-gradient bg-400 text-white/70 relative w-full bg-inherit border-1 border-white rounded-full pl-8 py-4 pr-28 text-lg font-light placeholder-white/60 outline-none" />
+                className="overflow-hidden bg-gradient-to-r from-[#1B183F] via-[#700da698] to-[#1B183F] animate-gradient bg-400 text-white/70 relative w-full bg-inherit border-1 border-white rounded-full pl-8 py-4 pr-28 text-lg font-light placeholder-white/60 outline-none" />
               <Button
                   disabled={isPending}
                   className={`absolute top-[10%] right-[5px] rounded-full h-[80%] aspect-square text-md text-white bg-white/5 ${isPending ? 'bg-white/0' : 'hover:bg-white/35'}`}

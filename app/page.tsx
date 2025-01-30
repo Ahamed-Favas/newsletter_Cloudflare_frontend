@@ -51,7 +51,7 @@ export default function Home() {
             className: "bg-white/30 font-bold text-white rounded-xl shadow-lg p-4",
           }} position="bottom-right" />
       </div>
-      <div className="overflow-hidden flex min-h-screen m-2 justify-center place-items-start pt-56">
+      <div className="overflow-hidden flex min-h-screen m-2 justify-center place-items-start pt-36 md:pt-56">
         <div className="mx-auto w-full max-w-xl rounded-md p-4">
           <div className="text-center mb-10">
             <div className="font-bold text-white text-4xl font-mono mb-6">{`Pastpricing Daily`}</div>

@@ -5,6 +5,8 @@ import { z } from "zod";
 import { Toaster, toast } from "sonner";
 import { SignIN } from "@/auth/signInAction";
 import ReactLoading from 'react-loading';
+import Background from "@/components/Background";
+
 
 export default function Home() {
   const [inputVisibility, setInputVisibility] = useState(true)
@@ -43,6 +45,7 @@ export default function Home() {
 
   return (
     <div>
+      <Background/>
       <div>
           <Toaster
           toastOptions={{
@@ -61,7 +64,7 @@ export default function Home() {
         {inputVisibility ? (
             <>
               <input type="text" autoComplete="off" name="userInput" placeholder="Your email address"
-                className={`overflow-hidden bg-gradient-to-r from-[#1B183F] via-[#700da698] to-[#1B183F] animate-gradient bg-400 text-white/70 relative w-full bg-inherit border-1 border-white rounded-full pl-8 py-4 ${isPending ? 'pr-14' : 'pr-28' } text-lg font-light placeholder-white/60 outline-none`} />
+                className={`overflow-hidden bg-gradient-to-r from-black/50 via-[#3C1710] to-black/50 animate-gradient bg-400 text-white/70 relative w-full bg-inherit border-1 border-white rounded-full pl-8 py-4 ${isPending ? 'pr-14' : 'pr-28' } text-lg font-light placeholder-white/60 outline-none`} />
               <Button
                   disabled={isPending}
                   className={`absolute top-[10%] right-[5px] rounded-full h-[80%] aspect-square text-md text-white bg-white/5 ${isPending ? 'bg-white/0' : 'hover:bg-white/35'}`}

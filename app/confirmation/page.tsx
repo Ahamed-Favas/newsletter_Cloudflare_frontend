@@ -1,5 +1,9 @@
+import Background from "@/components/Background"
+
 function Page() {
   return (
+    <div>
+      <Background/>
     <div className="overflow-hidden flex min-h-screen m-2 justify-center place-items-start pt-36 md:pt-56">
         <div className="mx-auto w-full max-w-xl rounded-md p-4">
           <div className="text-center">
@@ -9,6 +13,7 @@ function Page() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

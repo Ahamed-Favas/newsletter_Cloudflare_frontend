@@ -70,7 +70,7 @@ export default function Home() {
       <div className="overflow-hidden flex min-h-screen m-2 justify-center place-items-start pt-12 md:pt-32">
         <div className="mx-auto w-full max-w-xl rounded-md p-2">
           <div className="text-center mb-2 md:mb-4">
-            <div className="font-bold text-white md:text-4xl text-2xl font-mono mb-2 md:mb-6">Pastpricing Daily</div>
+            <div className="font-bold text-white md:text-4xl text-2xl font-mono mb-2 md:mb-2">Pastpricing Daily</div>
             <div className="text-white/60 md:text-xl text-lg font-medium">
               Get the top news of the day, delivered straight to your inbox every morning.
             </div>
@@ -78,7 +78,7 @@ export default function Home() {
           <form action={onSubmit} className="flex-col align-middle w-full overflow-hidden space-y-2 md:space-y-6">
             {inputVisibility ? (
               <>
-                <div className="p-4 space-y-4">
+                <div className="p-2 space-y-4">
                   <>
                     <p className="text-center text-white/70 font-thin text-normal md:text-lg">Select your news source</p>
                     <div className="flex items-center justify-center">
@@ -98,7 +98,7 @@ export default function Home() {
                     autoComplete="off"
                     name="userEmail"
                     placeholder="Your email address"
-                    className="overflow-hidden bg-gradient-to-r from-black/50 via-[#3C1710] to-black/50 animate-gradient bg-400 text-white/70 w-full bg-inherit border border-white/20 rounded-full pl-8 py-4 pr-28 text-lg font-light placeholder-white/60 outline-none focus:border-white/40"
+                    className="overflow-hidden bg-gradient-to-r from-black/50 via-gray-600 to-black/50 animate-gradient bg-400 text-white/70 w-full bg-inherit border border-white/20 rounded-full pl-8 py-4 pr-28 text-lg font-light placeholder-white/60 outline-none focus:border-white/40"
                   />
                   <Button
                     disabled={isPending}

@@ -17,7 +17,6 @@ const config: Config = {
         	},
 		},
 		animation: {
-			centralGradient: 'gradient 5s ease infinite',
 			gradient: 'gradient 10s ease infinite',
 		},
 		backgroundSize: {

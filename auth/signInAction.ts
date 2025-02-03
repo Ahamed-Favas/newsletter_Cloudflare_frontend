@@ -1,5 +1,11 @@
+import { AddPendingUser } from "@/app/actions/checkInput&Addpending";
 import { signIn } from "next-auth/react"
-export async function SignIN(email: string): Promise<{status: string}> {
+
+export async function SignIN(email: string, selectedPrefers: { [k: string]: boolean; }, selectedSource: { [k: string]: boolean; }): Promise<{status: string}> {
+    const { status } = await AddPendingUser(email, selectedPrefers, selectedSource)
+    if(status === "error") {
+        return {status: "error"}
+    }
     const signInResponse = await signIn('email', {
         email: email,
         callbackUrl: '/confirmation',
@@ -10,7 +16,3 @@ export async function SignIN(email: string): Promise<{status: string}> {
     }
     return {status: "success"};
 }
-
-//TODO configure cf to read users db
-//TODO chnage cf ai congiruration, rss feeds
-//TODO change mail template to more engaging

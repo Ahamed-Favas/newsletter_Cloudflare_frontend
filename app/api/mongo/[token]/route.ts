@@ -7,13 +7,10 @@ export async function GET(
   { params }: { params: { token: string } }
 ) {
   const { token } = params;
-  console.log(token)
   const secret = new TextEncoder().encode(process.env.JWT_SECRET);
-
   try {
     const { payload } = await jwtVerify(token, secret);
     const userEmail = payload.mail;
-    console.log(userEmail)
     
     if (!userEmail) {
       return NextResponse.json(

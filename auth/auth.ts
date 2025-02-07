@@ -1,6 +1,8 @@
 import EmailProvider from "next-auth/providers/email";
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import { prisma } from "@/prisma/prisma";
+import { SignJWT } from "jose";
+
 
 export const authOptions = {
   adapter: PrismaAdapter(prisma),
@@ -67,13 +69,19 @@ export const authOptions = {
 
         if ( pendingUser == null ) return
 
+        const secret = new TextEncoder().encode(process.env.JWT_SECRET);
+        const unsubscribeToken = await new SignJWT({ mail: user.email })
+        .setProtectedHeader({ alg: "HS256" })
+        .sign(secret);
+
         await prisma.user.update({
           where : {
             email: user.email
           },
           data : {
             preferences: pendingUser.preferences,
-            sources: pendingUser.sources
+            sources: pendingUser.sources,
+            unsubToken: unsubscribeToken
           }
         })
       } catch (error) {

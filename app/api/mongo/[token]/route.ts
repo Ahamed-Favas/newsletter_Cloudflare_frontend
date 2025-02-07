@@ -12,7 +12,7 @@ export async function GET(
 
   try {
     const { payload } = await jwtVerify(token, secret);
-    const userEmail = payload.email;
+    const userEmail = payload.mail;
     console.log(userEmail)
     
     if (!userEmail) {

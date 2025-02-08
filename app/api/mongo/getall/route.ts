@@ -1,6 +1,6 @@
 import { prisma } from "@/prisma/prisma";
 import { NextResponse } from "next/server";
-import { jwtVerify } from "jose";
+import { EncryptJWT, jwtVerify } from "jose";
 
 async function getUsers() {
     return await prisma.user.findMany();
@@ -15,7 +15,14 @@ export async function GET(req: Request) {
     try {
         await jwtVerify(token, secret);
         const users = await getUsers();
-        return NextResponse.json({ users: users }, { status: 200 });
+
+         const encryptedUsersData = await new EncryptJWT( {users} )
+        .setProtectedHeader({ alg: "dir", enc: "A256GCM" })
+        .setIssuedAt()
+        .setExpirationTime("5 minutes")
+        .encrypt(secret);
+
+        return NextResponse.json({ token: encryptedUsersData }, { status: 200 });
     } catch (error) {
         console.error(error);
         return NextResponse.json({ message: "Invalid or expired token" }, { status: 403 });

@@ -67,11 +67,11 @@ export default function Home() {
           position="bottom-right"
         />
       </div>
-      <div className="overflow-hidden flex min-h-screen m-2 justify-center place-items-start pt-12 md:pt-32">
+      <div className="overflow-hidden flex min-h-screen m-2 justify-center place-items-start pt-12 md:pt-24">
         <div className="mx-auto w-full max-w-xl rounded-md p-2">
-          <div className="text-center mb-2 md:mb-4">
-            <div className="font-bold text-white md:text-4xl text-2xl font-mono mb-2 md:mb-2">Pastpricing Daily</div>
-            <div className="text-white/60 md:text-xl text-lg font-medium">
+          <div className="text-center mb-4 md:mb-6">
+            <div className="font-bold text-white md:text-4xl text-2xl font-mono mb-1 md:mb-1">Pastpricing Daily</div>
+            <div className="text-white/60 md:text-xl text-lg font-thin">
               Get the top news of the day, delivered straight to your inbox every morning.
             </div>
           </div>
@@ -80,14 +80,14 @@ export default function Home() {
               <>
                 <div className="p-2 space-y-4">
                   <>
-                    <p className="text-center text-white/70 font-thin text-normal md:text-lg">Select your news source</p>
-                    <div className="flex items-center justify-center">
+                    <p className="text-center text-white/70 font-medium text-normal md:text-lg">Select your news source</p>
+                    <div className="flex items-center justify-center pb-2">
                       <ToggleItem toggleList={newsOptions} selectedList={selectedSource} setFunction={setSelectedSource} maxLen={1} />  {/* only one source as of now */}
                     </div>
                   </>
                   <>
-                    <p className="text-center text-white/70 font-thin text-normal md:text-lg">Pick the type of news you’re most interested in</p>
-                    <div className="grid grid-cols-3 gap-4">
+                    <p className="text-center text-white/70 font-medium text-normal md:text-lg">Pick the type of news you’re most interested in</p>
+                    <div className="grid grid-cols-3 gap-4 pb-4">
                       <ToggleItem toggleList={prefOptions} selectedList={selectedPrefers} setFunction={setSelectedPrefers} maxLen={9} />
                     </div>
                   </>

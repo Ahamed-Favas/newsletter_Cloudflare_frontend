@@ -31,8 +31,8 @@ export function ToggleItem({ toggleList, selectedList, setFunction, maxLen }: To
                     pressed={selectedList[option] || toggleList.length === 1} //  if only one element is toggle list it defaultly in pressed
                     onPressedChange={() => handleToggle(option)}
                     className={`rounded-3xl p-6 transition-all
-                    data-[state=on]:bg-teal-800 data-[state=on]:text-white
-                    data-[state=off]:bg-black/40 data-[state=off]:text-white/70
+                    data-[state=on]:bg-stone-600 data-[state=on]:text-white
+                    data-[state=off]:bg-white/5 data-[state=off]:text-white/70
                     data-[state=off]:backdrop-blur-sm`}
 
                 >

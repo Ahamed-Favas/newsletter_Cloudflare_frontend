@@ -3,10 +3,9 @@ import { prisma } from "@/prisma/prisma";
 import { jwtVerify } from "jose";
 
 export async function GET(
-  request: Request,
-  { params }: { params: { token: string } }
+  request: Request
 ) {
-  const { token } = params;
+  const { token } = await request.json()
   const secret = new TextEncoder().encode(process.env.JWT_SECRET);
   try {
     const { payload } = await jwtVerify(token, secret);

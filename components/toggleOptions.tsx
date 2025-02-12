@@ -28,7 +28,7 @@ export function ToggleItem({ toggleList, selectedList, setFunction, maxLen }: To
                 <Toggle
                     key={option}
                     aria-label={`Toggle ${option}`}
-                    pressed={selectedList[option] || toggleList.length === 1} //  if only one element is toggle list it defaultly in pressed
+                    pressed={selectedList[option]}
                     onPressedChange={() => handleToggle(option)}
                     className={`rounded-3xl p-6 transition-all
                     data-[state=on]:bg-stone-600 data-[state=on]:text-white

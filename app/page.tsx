@@ -16,7 +16,7 @@ export default function Home() {
     Object.fromEntries(prefOptions.map(option => [option, false]))
   );
   const [selectedSource, setSelectedSource] = useState(
-    Object.fromEntries(newsOptions.map((option) => [option, newsOptions.length === 1]))  // as of now, because of only one source
+    Object.fromEntries(newsOptions.map((option) => [option, false]))
   );
   const [isPending, startTransition] = useTransition();
   const formSchema = z.string().email();
@@ -32,6 +32,7 @@ export default function Home() {
     }
     if(!soureCount) {
       toast("Pick atleast one source")
+      return
     }
     const userMail = formData.get('userEmail');
     const checkEmail = formSchema.safeParse(userMail);

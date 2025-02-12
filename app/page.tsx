@@ -98,7 +98,7 @@ export default function Home() {
                     autoComplete="off"
                     name="userEmail"
                     placeholder="Your email address"
-                    className="overflow-hidden bg-gradient-to-r from-black/50 via-gray-600 to-black/50 animate-gradient bg-400 text-white/70 w-full bg-inherit border border-white/20 rounded-full pl-8 py-4 pr-28 text-lg font-light placeholder-white/60 outline-none focus:border-white/40"
+                    className={`overflow-hidden bg-gradient-to-r from-black/50 via-gray-600 to-black/50 animate-gradient bg-400 text-white/70 w-full bg-inherit border border-white/20 rounded-full pl-8 py-4 ${isPending ? 'pr-12' : 'pr-28'} text-lg font-light placeholder-white/60 outline-none focus:border-white/40`}
                   />
                   <Button
                     disabled={isPending}

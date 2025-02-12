@@ -12,20 +12,18 @@ export async function AddPendingUser( email: string, selectedPrefers: { [k: stri
     const checkEmail = emailSchema.safeParse(email);
     if (!checkEmail.success) return { status: "error" }
 
-    const selectedPrefersLength = Object.values(selectedPrefers).filter(Boolean).length;
-    const selectedSourceLength = Object.values(selectedSource).filter(Boolean).length;
+    const selectedPrefersList = Object.keys(selectedPrefers).filter(key => selectedPrefers[key]);
+    const selectedSourceList = Object.keys(selectedSource).filter(key => selectedSource[key]);
 
-    Object.keys(selectedPrefers).forEach((key)=>{
-        if (!allowedSources.includes(key) || 1 > selectedPrefersLength || 3 < selectedPrefersLength) {
-            return { status: "error" }
-        }
-    })
+    const isPrefSubset = selectedPrefersList.every(pref => allowedPrefers.includes(pref))
+    if ( !isPrefSubset || 1 > selectedPrefersList.length || allowedPrefers.length < selectedPrefersList.length ) {  // atleast one and maximum upto allowedPrefers.length
+        return { status: "error" }
+    }
 
-    Object.keys(selectedSource).forEach((key)=>{
-        if (!allowedPrefers.includes(key) || selectedSourceLength !== 1 ) {
-            return { status: "error" }
-        }
-    })
+    const isSourcSubset = selectedSourceList.every(sou => allowedSources.includes(sou))
+    if ( !isSourcSubset || selectedSourceList.length !== 1 ) { // atleast and only one source as of now
+        return { status: "error" } 
+    }
 
     try {
         await prisma.pendingUser.upsert({

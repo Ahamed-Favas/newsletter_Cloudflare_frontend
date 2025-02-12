@@ -2,9 +2,10 @@ import EmailProvider from "next-auth/providers/email";
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import { prisma } from "@/prisma/prisma";
 import { SignJWT } from "jose";
+import { NextAuthOptions } from "next-auth";
 
 
-export const authOptions = {
+export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     EmailProvider({
@@ -47,6 +48,9 @@ export const authOptions = {
   },
   session: {
       strategy: 'jwt'
+  },
+  jwt: {
+        secret: process.env.NEXTAUTH_SECRET,
   },
   events: {  // triggered when user clicks link on mail
     // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars

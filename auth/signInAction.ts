@@ -8,7 +8,7 @@ export async function SignIN(email: string, selectedPrefers: { [k: string]: bool
     }
     const signInResponse = await signIn('email', {
         email: email,
-        callbackUrl: '/confirmation',
+        callbackUrl: 'https://newsletter.pastpricing.com/confirmation',
         redirect: false,
     })
     if( !signInResponse?.ok ) {

@@ -45,6 +45,9 @@ export const authOptions = {
   pages: {
     signIn: "/"
   },
+  session: {
+      strategy: 'jwt'
+  },
   events: {  // triggered when user clicks link on mail
     // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
     async signIn(message: any) {

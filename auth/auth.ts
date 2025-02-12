@@ -50,16 +50,6 @@ export const authOptions = {
     async signIn(message: any) {
       const { user } = message;
       try {
-        // deleting all pemding users which are not verified their email even after 24 hrs
-        const twentyFourHoursAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
-        await prisma.pendingUser.deleteMany({
-            where: {
-                createdAt: {
-                    lt: twentyFourHoursAgo
-                }
-            }
-        });
-
       // transfering fields from pendingUsers to Users
         const pendingUser = await prisma.pendingUser.findUnique({
           where: {
@@ -84,6 +74,16 @@ export const authOptions = {
             unsubToken: unsubscribeToken
           }
         })
+
+        // deleting all pemding users which are not verified their email even after 24 hrs
+        const twentyFourHoursAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
+        await prisma.pendingUser.deleteMany({
+            where: {
+                createdAt: {
+                    lt: twentyFourHoursAgo
+                }
+            }
+        });
       } catch (error) {
         console.error(error)
         return

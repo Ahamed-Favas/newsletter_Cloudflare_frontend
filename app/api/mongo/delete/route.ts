@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/prisma/prisma";
 import { jwtVerify } from "jose";
 
-export async function GET(
+export async function DELETE(
   request: Request
 ) {
   const { token } = await request.json()

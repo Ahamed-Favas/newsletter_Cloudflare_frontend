@@ -3,8 +3,8 @@ import Background from "@/components/Background";
 async function UnsubscribePage({ params }: { params: { slug: string } }) {
   const token = params.slug;
 
-  await fetch('api/mongo/delete', {
-    method: "POST",
+  await fetch('https://newsletter.pastpricing.com/api/mongo/delete', {
+    method: "DELETE",
     headers: { "Content-Type": "application/json" },
     cache: "no-store",
     body: JSON.stringify({ token }),

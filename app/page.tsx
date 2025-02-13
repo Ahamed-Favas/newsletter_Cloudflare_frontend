@@ -99,12 +99,12 @@ export default function Home() {
                     autoComplete="off"
                     name="userEmail"
                     placeholder="Your email address"
-                    className={`overflow-hidden bg-gradient-to-r from-black/50 via-gray-600 to-black/50 animate-gradient bg-400 text-white/70 w-full bg-inherit border border-white/20 rounded-full pl-8 py-4 ${isPending ? 'pr-12' : 'pr-28'} text-lg font-light placeholder-white/60 outline-none focus:border-white/40`}
+                    className={`overflow-hidden  text-white/70 w-full bg-white/5 rounded-full pl-8 py-4 ${isPending ? 'pr-12' : 'pr-28'} text-lg font-light placeholder-white/60 outline-none focus:border-white/40`}
                   />
                   <Button
                     disabled={isPending}
                     className={`absolute top-[10%] right-[5px] rounded-full h-[80%] aspect-square text-md text-white
-                      ${isPending ? 'bg-white/0' : 'bg-white/10 hover:bg-white/20'}`}
+                      ${isPending ? 'bg-white/0' : 'bg-white/10 hover:bg-white/20 bg-gradient-to-r from-[#4b494932] via-[#700da698] to-[#d40c0ce5] animate-gradient bg-400'}`}
                   >
                     {isPending ? (
                       <ReactLoading type="spokes" height={24} width={24} className="absolute top-[33%] right-[8px] bg-inherit"/>

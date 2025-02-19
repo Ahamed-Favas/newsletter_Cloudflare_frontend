@@ -31,7 +31,7 @@ export function ToggleItem({ toggleList, selectedList, setFunction, maxLen }: To
                     pressed={selectedList[option]}
                     onPressedChange={() => handleToggle(option)}
                     className={`rounded-3xl p-6 transition-all
-                    data-[state=on]:bg-stone-600 data-[state=on]:text-white
+                    data-[state=on]:bg-[#093637] data-[state=on]:text-white
                     data-[state=off]:bg-white/5 data-[state=off]:text-white/70
                     data-[state=off]:backdrop-blur-sm`}
 

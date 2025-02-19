@@ -68,7 +68,7 @@ export default function Home() {
           position="bottom-right"
         />
       </div>
-      <div className="overflow-hidden flex min-h-screen m-2 justify-center place-items-center">
+      <div className="overflow-hidden flex min-h-screen m-2 justify-center place-items-start pt-12 md:pt-24">
         <div className="mx-auto w-full max-w-xl p-8 backdrop-blur-3xl shadow-2xl border-2 rounded-xl border-white/5">
           <div className="text-center mb-4 md:mb-6">
             <div className="font-bold text-white md:text-4xl text-2xl font-mono mb-1 md:mb-1">Pastpricing Daily</div>

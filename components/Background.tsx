@@ -13,7 +13,7 @@ export default function Background() {
                 sizes="100vw"
                 fill
                 className="opacity-0 transition-opacity duration-1000 ease-linear"
-                onLoad={(e) => (e.target as HTMLElement).classList.replace('opacity-0', 'opacity-30')}
+                onLoad={(e) => (e.target as HTMLElement).classList.replace('opacity-0', 'opacity-25')}
                 style={{
                     objectFit: 'cover',
                 }}

@@ -104,7 +104,7 @@ export default function Home() {
                   <Button
                     disabled={isPending}
                     className={`absolute top-[10%] right-[5px] rounded-full h-[80%] aspect-square text-md text-white
-                      ${isPending ? 'bg-white/0' : 'bg-white/10 hover:bg-white/20 bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] animate-gradient bg-400'}`}
+                      ${isPending ? 'bg-white/0' : 'bg-white/10 hover:bg-white/20 bg-gradient-to-r from-[#c0c0c02f] via-[#302b63] to-[#c0c0c035] animate-gradient bg-400'}`}
                   >
                     {isPending ? (
                       <ReactLoading type="spokes" height={24} width={24} className="absolute top-[33%] right-[8px] bg-inherit"/>

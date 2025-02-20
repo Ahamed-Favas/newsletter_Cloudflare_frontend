@@ -87,7 +87,7 @@ export default function Home() {
                     </div>
                   </>
                   <>
-                    <p className="text-center text-white/70 font-medium text-normal md:text-lg">Pick the type of news you’re most interested in</p>
+                    <p className="text-center text-white/70 font-medium text-normal md:text-lg">Pick the types of news you’re most interested in</p>
                     <div className="grid grid-cols-3 gap-4 pb-4">
                       <ToggleItem toggleList={prefOptions} selectedList={selectedPrefers} setFunction={setSelectedPrefers} maxLen={9} />
                     </div>
